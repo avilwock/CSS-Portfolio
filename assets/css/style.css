@@ -24,6 +24,11 @@
 .child {
     flex-basis: 100%;
 }
+
+.box img {
+    width: 100%;
+    height: auto;
+}
     
 .copyright {
         position: absolute;
