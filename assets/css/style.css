@@ -1,34 +1,46 @@
-* {
- viewport-fit: contain;
+/*testing root colors*/
+:root {
+  --outer-space: red;
+  --inner-space: darkblue;
+}
+
+::selection {
+  background-color: var(--outer-space);
+  color: var(--inner-space);
 }
 
 .card {
+    flex: 1 0 200px;
+    padding: 10px;
     display: flex;
-    flex-direction: row;
-    flex-flow:row;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
+.boxes {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+}
 
 .box {
-    border: 5px solid black;
-    border-radius: 10px;
-    flex-wrap: wrap;
+  flex-flow: wrap;
+  justify-content: space-between;
+  flex: 2 1 200px;
+  border: 5px solid black;
+  border-radius: 10px;
 }
 
 .parent {
-    height: 2000px;
-    width: 400x;
-}
-
-.child {
-    flex-basis: 100%;
+    height: 200px;
+    width: 200x;
 }
 
 .box img {
     width: 100%;
     height: auto;
 }
+
     
 .copyright {
         position: absolute;
@@ -37,9 +49,9 @@
 
 #contact {
     top: 100%;
-    position: aboslute;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: bottom;
 }
+
