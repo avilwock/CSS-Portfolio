@@ -4,8 +4,17 @@ background-color: black;
 }
 */
 
+body {
+  margin: 0;
+  font-family: system-ui;
+}
+
+header {
+  background-color: white;
+  color: white;
+
+}
 .card {
-    flex: 1 0 200px;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +30,7 @@ background-color: black;
 .box {
   flex-flow: wrap;
   justify-content: space-between;
-  flex: 2 1 200px;
+  flex: 1 0 200px;
   border: 5px solid black;
   border-radius: 10px;
 }
@@ -47,23 +56,40 @@ background-color: black;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: bottom;
+    align-items: center;
 }
 
-h1,
 h2,
 h3,
 h4 {
-  text-align: center;
+  display: flex;
+  align-self: center;
+  justify-content: center;
 }
 
-#header-background {
-  background-image: url(/assets/images/44373.jpg);
-  background-size: cover;
+.header-background {
+  background-image: url('/images/44373.jpg');
+  height: 150px;
+  background-size: 100% 100%;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 100%;
-  min-height: 100%;
+}
+
+.image {
+  padding-top: 50px;
+  color: white;
+  background-image: url(../images/header_image.jpg);
+  font-size: 60px;
+  background-size: 100% 100%;
+  text-align: start;
+}
+
+
+@media screen and (max-width: 768px){
+  header {
+    flex-direction: column;
+  }
+  
+  main {
+    max-width: 1200px;
+  }
 }
