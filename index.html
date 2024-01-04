@@ -7,31 +7,37 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="/assets/css/reset.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
-
 </head>
    
 <body>
-
-
-  <header>
-    <div class="container">
+  <header class="header">
       <h1 class="image">
       Introduction
       </h1>
-    </div>
+      <nav>
+      <ul>
+        <li><a href="#Introduction">About Me</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact Me</a></li>
+      </ul>
+   </nav> 
     <p>Introduction... Text to be entered </p>
-  </header>
-    
+ </header>
+    <section class="content">
+    <article id="Introduction" class="heading">
+    </article>
+        <h2>About Me</h2>
+    </section>  
+
   <main>
     <h2>Projects</h2>
-    <section class="boxes">
-        
-        <figure class="box">
+    <section id="Projects">
+     <figure class="box">
            <h3 class="child">Placeholder 1</h3>
            <p>This is a placeholder for my first project.</p>
            <img src="https://via.placeholder.com/200" alt="placeholder image 1"/>
            <button type="button"></button>
-        </figure>
+     </figure>
       
         <figure class="box">
            <h3 class="child">Placeholder 2</h3>
@@ -41,6 +47,7 @@
         </figure>
         
         <figure class="box">
+          <h3>Placeholder 3</h3>
            <a href="https://google.com"> 
            <img src="assets/images/Guitar Icon 1.jpg" alt="placeholder image 3"/>
            <p>This is a placeholder for my third project.</p> 
@@ -68,7 +75,7 @@
     </section> 
     
     
-        <section id="contact">
+        <section id="Contact">
           <h3 class="text-center">Contact Me</h3>
           <form>
             <ul>
