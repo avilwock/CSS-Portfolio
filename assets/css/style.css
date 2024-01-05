@@ -17,14 +17,6 @@ body {
   float: right;
 }
 
-a:link, a:visited {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover, a:active {
-  color: blue;
-}
 
 .image {
   margin-top: 0px;
@@ -55,6 +47,10 @@ instead of vertically.*/
   border-radius: 50%;
 }
 
+.boxes p {
+  text-align: center;
+}
+
 .box {
   flex-flow: wrap;
   justify-content: space-around;
@@ -76,9 +72,6 @@ instead of vertically.*/
     border-radius: 50%;
     height: auto;
 }
-
-
-
     
 .copyright {
   position: absolute;
@@ -128,6 +121,18 @@ ul {
   text-align: start;
   align-items: start;
 }
+
+
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: blue;
+}
+
 
 
 @media screen and (max-width: 768px){
