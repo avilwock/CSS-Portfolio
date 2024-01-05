@@ -6,23 +6,37 @@ body {
   color: white;
 }
 
-header {
-  top: 0;
-  background-color: black;
+.links {
+  position: relative;
+  margin-top: 150px;
+  padding: 0px;
   color: white;
+  background-color: transparent;
+  list-style-type: none;
+  top: 0;
+  float: right;
+}
+
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: blue;
+}
+
+.image {
+  margin-top: 0px;
 }
 
 .header nav {
-  padding-top: 15px;
+  padding-top: 0px;
+  flex-direction: row;
   margin-right: 20px;
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 20px;
-}
-/*This provides the list-style-type for the header unordered list, showing no item 
-marker.*/
-.header nav ul {
-  list-style-type: none;
 }
 
 /*This provides the display type, and left margin for the unordered list in the
@@ -33,10 +47,11 @@ instead of vertically.*/
   margin-left: 25px;
 }
 
-.projects {
+.boxes {
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
+  justify-content: space-around;
   border-radius: 50%;
 }
 
@@ -52,7 +67,7 @@ instead of vertically.*/
   padding: 0px;
   flex: 0 0 300px;
   box-shadow: 10px 10px 5px purple;
-  margin: 200px;
+  margin: 100px;
 
 }
 
@@ -61,6 +76,8 @@ instead of vertically.*/
     border-radius: 50%;
     height: auto;
 }
+
+
 
     
 .copyright {
@@ -96,6 +113,11 @@ h2 {
   background-position: center;
 }
 */
+ul {
+  text-align: right;
+  list-style-position: inside;
+  padding-right: 10px;
+}
 
 .image {
   padding-top: 100px;
