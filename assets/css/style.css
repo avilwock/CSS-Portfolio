@@ -1,6 +1,5 @@
-/*This sets the entire pages margin, font-family, font-color, and background
-color*/
-
+/*This sets the entire pages margin-top and margin to 0 pixels, font-family 
+to system-ui, font-color to white, and background color to black*/
 body {
   margin-top: 0px;
   margin: 0px;
@@ -9,22 +8,10 @@ body {
   background-color: black;
   }
 
-/*this sets all of the links on the Nav bar to a relative position 150 px from 
-the top of the screen, no padding, a white font, a transparent background, 
-removes bullets, and floats it to the right*/
-.links {
-  position: relative;
-  margin-top: 150px;
-  padding: 0px;
-  color: white;
-  background-color: transparent;
-  list-style-type: none;
-  top: 0;
-  float: right;
-}
-
 /*This sets the nav bar to have no padding, aligns the list items in a straight 
-line, aligns it to the right, selects font, and font size*/
+line, aligns it to the right with a margin of 20 pixels, selects font, and a 
+font size of 20 pixels.*/
+
 .header nav {
   padding-top: 0px;
   flex-direction: row;
@@ -32,6 +19,19 @@ line, aligns it to the right, selects font, and font size*/
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
   font-size: 20px;
+}
+
+  /*This sets all of the links on the Nav bar to a relative position of 150 
+pixels from the top of the screen, no padding, a transparent background, 
+removes bullets from the list items, and floats it to the right*/
+.links {
+  position: relative;
+  margin-top: 150px;
+  padding: 0px;
+  background-color: transparent;
+  list-style-type: none;
+  top: 0;
+  float: right;
 }
 
 /*This provides the display type, and left margin for the unordered list in the
@@ -42,6 +42,62 @@ instead of vertically.*/
   margin-left: 25px;
 }
 
+/*This sets the font to white when the links on the nav bar are not touched, 
+when the link has been visited*/
+a:link, a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+/*This sets the font to blue when the links on the nav bar are hovered over, 
+or active*/
+a:hover, a:active {
+  color: blue;
+}
+
+
+/*This section provides a display type and flex wrap, as well as aligns the 
+items to the left. The font is at 40 pixels, the left margin is 10 pixels, and 
+the top margin is 30 pixels*/
+.float-left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: left;
+  font-size: 40px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+/*This section adds a wrap to the content, and stretches the image to the length
+of the page. It sets a margin of 0 pixels, and a padding of 100 pixels from the 
+top. It sets the height of the image to 80px, with a width of 100% for the image.
+The background-size is the full length of the page. The text and image are aligned 
+to the left side of the page, and the image is stretched to fit the section.*/
+.image {
+  flex-wrap: wrap;
+  align-content: stretch;
+  margin-top: 0px;
+  padding-top: 100px;
+  background-image: url(../images/header_image.jpg);
+  height: 80px;
+  width: 100%;
+  background-size: 100% 100%;
+  text-align: start;
+  align-items: start;
+  align-content: stretch;
+}
+
+/*This sets the Introduction to align tex to the left with a margin of 10px,
+The font size is set to 15px.*/
+.content {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+/*This determines the section display as flex, the direction as a row, the flow 
+as wrap, the content is justified with space around, and the border-radius is 
+at 50% to round the edges*/
 .boxes {
   display: flex;
   flex-direction: row;
@@ -50,18 +106,27 @@ instead of vertically.*/
   border-radius: 50%;
 }
 
+/*This sections sets the text alignment to the center, and the margin-top to 
+70 pixels*/
 .boxes p {
  text-align: center;
  margin-top: 70px;
 }
 
-
+/*This section sets the image links to wrap within the section so there are 
+multiple on the same line. It sets the spacing to do space-around, and aligns
+items to the center. The border is set to 5 pixels with a solid black line 
+around it. The padding is set to 10 pixels from the top Each images is set to 
+200 pixel width and height. The border radius is 50 to make the images round.
+Padding around the images is set to 45 pixels. The flex contains the images 
+with an even spacing between them and 200 pixels of shrink. There is a margin 
+of 100 pixels*/
 .box {
+  display: flex;
   flex-flow: wrap;
   justify-content: space-around;
   align-items: center;
   border: 5px solid black;
-  border-width: 1px;
   padding-top: 10px;
   width: 200px;
   height: 200px;
@@ -72,6 +137,16 @@ instead of vertically.*/
 
 }
 
+/*This causes the images to become darker when hovered over to 90% opacity*/
+.box:hover {
+  filter: alpha(opacity=90%);
+  opacity: 0.4;
+}
+
+/* This section sets the images with a flex display and aligns the images to the
+center, and justifies them to the center. The content is stretched to fill the space.
+The max width of the images is set to the full size of the container, and the height
+is set to auto*/
 img {
     display: flex;
     align-self: center;
@@ -80,114 +155,89 @@ img {
     max-width: 100%;
     max-height: auto;
 }
-    
-.copyright {
-  position: absolute;
-  bottom: 0;
+
+/*This sets the first image to have a box shadow of 10px and a color of pink*/
+#img1 {
+  box-shadow: 10px 10px 10px #ed31b8;  
 }
 
+/*This sets the second image to have a box shadow of 10px and a color of orange*/
+#img2 {
+  box-shadow: 10px 10px 10px #ff7f27;
+}
+
+/*This sets the third image to have a box shadow of 10px and a color of yellow*/
+#img3 {
+  box-shadow: 10px 10px 10px #fff200;
+}
+
+/*This sets the fourth image to have a box shadow of 10px and a color of green*/
+#img4 {
+  box-shadow: 10px 10px 10px #3bf448;
+}
+
+/*This sets the fifth image to have a box shadow of 10px and a color of blue*/
+#img5 {
+  box-shadow: 10px 10px 10px #3ebbf1;
+}
+
+/*This sets the sixth image to have a box shadow of 10px and a color of purple*/
+#img6 {
+  box-shadow: 10px 10px 10px #be3fcc;
+}
+
+/*Sets the contact at the bottom of the page, centered, and in a column wrap*/
 #contact {
-    top: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+  top: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
+/* set the contact list to have no bullet points, and aligns it to the right*/
 #contact ul li {
   list-style-type: none;
-  text-align: left;
-} 
+  text-align: right;
+}
 
+/*Sets headers 3 and 4 with a font size of 40 pixels, and alings and justifies
+them to the center*/
 h3,
 h4 {
-  font-size: 40px;
+  font-size: 20px;
   display: flex;
   align-self: center;
   justify-content: center;
 }
 
-.content {
-  text-align: left;
-  margin-left: 10px;
-  justify-self: center;
-  font-size: 15px;
-}
-
-h2 p {
-  font-size: 15px;
-}
-
+/*Sets the unordered list to have a text on the right, the list style is insde,
+and the padding is 10 pixels*/
 ul {
   text-align: right;
   list-style-position: inside;
   padding-right: 10px;
 }
 
-.image {
-  flex-wrap: wrap;
-  align-content: stretch;
-  margin-top: 0px;
-  padding-top: 100px;
-  color: white;
-  background-image: url(../images/header_image.jpg);
-  height: 80px;
-  width: 100%;
-  background-size: 100% 100%;
-  text-align: start;
-  align-items: start;
-  align-content: stretch;
-}
-
-#img1 {
-  box-shadow: 10px 10px 10px #ed31b8;  
-}
-
-#img2 {
-  box-shadow: 10px 10px 10px #ff7f27;
-}
-
-#img3 {
-  box-shadow: 10px 10px 10px #fff200;
-}
-
-#img4 {
-  box-shadow: 10px 10px 10px #3bf448;
-}
-
-#img5 {
-  box-shadow: 10px 10px 10px #3ebbf1;
-}
-
-#img6 {
-  box-shadow: 10px 10px 10px #be3fcc;
-}
-
-.box:hover {
-  filter: alpha(opacity=90%);
-  opacity: 0.4;
-}
-.float-left {
-  display: flex;
-  font-size: 50px;
-  margin-left: 10px;
-  flex-wrap: wrap;
-  align-items: left;
-  margin-top: 20px;
-}
-
-a:link, a:visited {
-  color: white;
-  text-decoration: none;
-}
-
-a:hover, a:active {
-  color: blue;
+/*This sets the copyright to a relative position at the right of the document.
+It is a the bottom of the document, and the padding is set to 20px*/
+.copyright {
+  position: relative;
+  text-align: end;
+  bottom: 0px;
+  padding: 20px;
 }
 
 
+/*This changes the page when the screen size reaches a size of 768 or less pixels.
+The header wraps into a column, the max-width changes to 1200 pixels, the flex size
+changes to 50%. The float left decreases in font-size, and the location moves from
+the margin top. The font size is changed to 15 pixels on the nav bar, and the 
+margin top moves to 40 pixels*/
 @media screen and (max-width: 768px){
   header {
+    flex:wrap;
     flex-direction: column;
   }
   
@@ -196,7 +246,7 @@ a:hover, a:active {
   }
 
   .boxes {
-    flex: 0 0 50;
+    flex: 0 0 50%;
 }
 
   .float-left {
@@ -208,8 +258,10 @@ a:hover, a:active {
     font-size: 15px;
     margin-top: 40px;
   }
-
 }
+/*This changes the page when the screen size is between 768 pixels, and 992 pixels. The
+flex changes to 33.333%*/
+
 @media screen and (max-width: 992px) {
   .boxes {
     flex: 0 0 33.333%;
