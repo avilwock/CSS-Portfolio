@@ -35,13 +35,13 @@ In the future I hope to implement more changes to the external link buttons rega
 
 ## Access
 
-To access this site, please visit: 
+To access this site, please visit: https://avilwock.github.io/CSS-Portfolio/ 
 
 ## Usage
 
 To use this webpage, select one of the three headers along the top right of the page, and the link will take you to that section in the page.
 
-![Alt text](<assets/images/CSS Portfolio.jpeg>)
+![Alt text](<assets/images/CSS Portfolio Image.jpeg>)
 
 Additionally, clicking the first image on the page, of a pink keyboard will link you to a project on an external website.
 
