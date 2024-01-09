@@ -8,6 +8,8 @@ A wireframe mock-up was created as a blueprint:
 
 ![Alt text](<assets/images/Wireframing 1.png>)
 
+Changes were made to the document from the original Wireframing design for usability.
+
 This project will provide an introduction to myself and my work, a recent photo, links to sections within my portfolio, and my projects, initially including my first project. The deployed portfolio will also be viewable and interact with various screens and devices in a responsive manner.
 
 During this project I learned how to better organize my HTML and CSS to condense down my coding, as well as a better understanding of how CSS and HTML interact with one another.
@@ -33,7 +35,7 @@ In the future I hope to implement more changes to the external link buttons rega
 
 ## Access
 
-To access this site, visit: 
+To access this site, please visit: 
 
 ## Usage
 

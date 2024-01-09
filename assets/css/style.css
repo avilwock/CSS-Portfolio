@@ -9,7 +9,7 @@ body {
   }
 
 /*This sets the nav bar to have no padding, aligns the list items in a straight 
-line, aligns it to the right with a margin of 20 pixels, selects font, and a 
+line, aligns it to the right with a margin of 20 pixels, selects font, and uses a 
 font size of 20 pixels.*/
 .header nav {
   padding-top: 0px;
@@ -20,9 +20,10 @@ font size of 20 pixels.*/
   font-size: 20px;
 }
 
-  /*This sets all of the links on the Nav bar to a relative position of 150 
-pixels from the top of the screen, no padding, a transparent background, 
-removes bullets from the list items, and floats it to the right*/
+  /*This sets all of the links on the Nav bar to a relative position, and positions
+  it 150 pixels from the top of the screen, no padding, a transparent background, 
+removes bullets from the list items, and sets the top of the box to the top of the page
+and floats it to the right*/
 .links {
   position: relative;
   margin-top: 150px;
@@ -35,13 +36,13 @@ removes bullets from the list items, and floats it to the right*/
 
 /*This provides the display type, and left margin for the unordered list in the
 navigation section of the header, and to display the list items horizontally,
-instead of vertically.*/
+instead of vertically. It also moves it 25 pixels to the left.*/
 .header nav ul li {
   display: inline-block;
   margin-left: 25px;
 }
 
-/*This sets the font to white when the links on the nav bar are not touched, 
+/*This sets the font to white when the links on the nav bar are not touched, and 
 when the link has been visited*/
 a:link, a:visited {
   color: white;
@@ -51,7 +52,7 @@ a:link, a:visited {
 /*This sets the font to blue when the links on the nav bar are hovered over, 
 or active*/
 a:hover, a:active {
-  color: blue;
+  color: rgb(247, 200, 49);
 }
 
 
@@ -61,7 +62,6 @@ the top margin is 30 pixels*/
 .float-left {
   display: flex;
   flex-wrap: wrap;
-  align-items: left;
   font-size: 40px;
   margin-left: 10px;
   margin-top: 30px;
@@ -86,40 +86,63 @@ to the left side of the page, and the image is stretched to fit the section.*/
   align-content: stretch;
 }
 
-/*This sets the Introduction to align text to the left with a margin of 10px,
-The font size is set to 15px.*/
+/*This adds a border with a width of 5 pixels, with a dashed border, in white
+sets the Introduction to align text to the left with a margin of 10px, and
+a padding of 15 pixels. The text is aligned ot the center, and there are left and
+right margins of 10%. The border-radius is set to 100% and at 100 pixels.*/
 .content {
-  border: 5px groove white;
+  border: 5px dashed white;
   margin: 10px;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
-  margin-left: 10px;
-  border-radius: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 100%;
   border-radius: 100px;
 }
 
+/*This sets the text in the content section to have a flex display and to align
+to the left. The margin is set 60 pixels to the left and 10 pixels from the top.
+The text is indented for each paragraph at 25 pixels.*/
+.content p {
+  display:flex;
+  text-align: left;
+  margin-left: 60px;
+  margin-top: 10px;
+  text-indent: 25px;
+
+}
+
+/*This gives the portfolio image a flex display, centers it, and gives it a border
+radius of 50%.*/
 .contentimg {
   display: flex;
   justify-content: center;
-}
+  border-radius: 50%;
+ }
 
+ /*This sets the max height of the portfolio image to 150 pixels, and the width is
+ set to auto.*/
 .content img {
   max-height: 150px;
-  max-width: auto;
 }
 
 /*This determines the section display as flex, the direction as a row, the flow 
-as wrap, the content is justified with space around, and the border-radius is 
-at 50% to round the edges*/
+as wrap. The items are aligned in the center, and there is a border radius of
+50%. The border is set to 5 pixels width, with a dashed white line. The border
+is given a 100 pixel radius. The left and right margins are the content is justified
+to the center.*/
 .boxes {
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
-  justify-content: space-around;
+  align-items: center;
   border-radius: 50%;
   border: 5px dashed white;
   border-radius: 100px;
-  margin: 10px;
+  margin-left:200px;
+  margin-right: 200px;
+  justify-content: center;
 }
 
 /*This sections sets the text alignment to the center, and the margin-top to 
@@ -129,28 +152,31 @@ at 50% to round the edges*/
  margin-top: 70px;
 }
 
-/*This section sets the image links to wrap within the section so there are 
-multiple on the same line. It sets the spacing to do space-around, and aligns
+/*This section sets the image links to flex wrap within the section so there are 
+multiple items on the same line. It sets the spacing to do space-around, and aligns
 items to the center. The border is set to 5 pixels with a solid black line 
-around it. The padding is set to 10 pixels from the top Each images is set to 
-200 pixel width and height. The border radius is 50 to make the images round.
-Padding around the images is set to 45 pixels. The flex contains the images 
-with an even spacing between them and 200 pixels of shrink. There is a margin 
-of 100 pixels*/
+around it. The padding is set to 10 pixels from the top. The flex basis for this
+has a growth and shrink of 0, and a 200 pixel flex basis. The border radius is set
+to 0 pixels. Padding around the images is set to 0 pixels.There is a margin of 
+50 pixels*/
 .box {
   display: flex;
   flex-flow: wrap;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border: 5px solid black;
   padding-top: 10px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  padding: 45px;
   flex: 0 0 200px;
-  margin: 100px;
+  border-radius: 0%;
+  padding: 0px;
+  margin: 50px;
+}
 
+/*This section sets the Horiseon Log with a width of 100% and centers it.*/
+.icon {
+  width:100%;
+  align-items: center;
 }
 
 /*This causes the images to become darker when hovered over to 90% opacity*/
@@ -159,10 +185,9 @@ of 100 pixels*/
   opacity: 0.4;
 }
 
-/* This section sets the images with a flex display and aligns the images to the
+/*This section sets the images with a flex display and aligns the images to the
 center, and justifies them to the center. The content is stretched to fill the space.
-The max width of the images is set to the full size of the container, and the height
-is set to auto*/
+The max width of the images is set to the full size of the container.*/
 img {
     display: flex;
     align-self: center;
@@ -171,21 +196,24 @@ img {
     max-width: 100%;
 }
 
+/*This section sets a flex display, and a wrap. The content is aligned and 
+justified to the center, and given a height of 200 pixels.*/
 .box img {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 2;
   justify-content: center;
-  align-items:center;
+  align-items: center;
+  height: 200px;
 }
 
-/*This sets the first image to have a box shadow of 10px and a color of pink*/
+/*This sets the first image to have a box shadow of 10px and a color of pink.
+The background-size is set to 100% with a flex display. The flex-growth is set
+to 2.*/
 #img1 {
   box-shadow: 10px 10px 10px #ed31b8;
-  align-items: fill;
-  background-image: url(../images/HoriseonLogo.png);
-  background-size: cover;
   background-size: 100% 100%;
+  display: flex;
+  flex-grow: 2;
 }
 
 /*This sets the second image to have a box shadow of 10px and a color of orange*/
@@ -213,7 +241,8 @@ img {
   box-shadow: 10px 10px 10px #be3fcc;
 }
 
-/*Sets the contact at the bottom of the page, centered, and in a column wrap*/
+/*Sets the contact at the bottom of the page, centered, and in a column wrap.
+The items and text are aligned to the center.*/
 #contact {
   top: 100%;
   display: flex;
@@ -229,7 +258,7 @@ img {
   text-align: right;
 }
 
-/*Sets headers 3 and 4 with a font size of 40 pixels, and aligns and justifies
+/*Sets header 3 with a font size of 40 pixels, and aligns and justifies
 them to the center*/
 h3 {
   font-size: 40px;
@@ -246,7 +275,7 @@ h4 {
   justify-content: center;
 }
 
-/*Sets the unordered list to have a text on the right, the list style is insde,
+/*Sets the unordered list to have a text on the right, the list style is inside,
 and the padding is 10 pixels*/
 ul {
   text-align: right;
@@ -254,68 +283,99 @@ ul {
   padding-right: 10px;
 }
 
+/*This gives the footer a relative position and is 0px from the bottom and justified
+to the right*/
+.footer {
+  position: relative;
+  bottom: 0px;
+  justify-content: right;
+}
+
 /*This sets the copyright to a relative position at the right of the document.
-It is a the bottom of the document, and the padding is set to 20px*/
+It is at the bottom of the document, and the padding is set to 20px*/
 .copyright {
   position: relative;
   text-align: end;
   bottom: 0px;
-  padding: 20px;
+  padding-right: 15px;
+  bottom: 0px;
 }
 
 
 /*This changes the page when the screen size reaches a size of 768 or less pixels.
-The header wraps into a column, the max-width changes to 1200 pixels, the flex size
+*the max-width changes to 1200 pixels, the flex size
 changes to 50%. The float left decreases in font-size, and the location moves from
 the margin top. The font size is changed to 15 pixels on the nav bar, and the 
 margin top moves to 40 pixels*/
 @media screen and (max-width: 768px){
+  /*The header wraps the item into a column.*/
   header {
     display: flex;
     flex: wrap;
     flex-direction: column;
   }
-  
+
+  /*The max width is changed to 1200 pixels*/
   main {
     max-width: 1200px;
   }
 
+  /*This sets boxes to a flex display with leftg and right  margins of 100 pixels.
+  The flex is set to 0 shrink and flex, with a basis of 50%. Content is aligned and
+  justified to center*/
   .boxes {
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
     flex: 0 0 50%;
+    align-items: center;
+    justify-content: center;
 }
 
+  /*This sets the name Amanda Vilwockto have a font-size of 75% and a top margin of 
+  40 pixels.*/
   .float-left {
     font-size: 75%;
     margin-top: 40px;
   }
 
+  /*This sets the header navigation font to 15 pixels, the display is flex, and the
+  content is justified to the right.*/
   .header nav {
     font-size: 15px;
     display: flex;
     justify-content: right;
   }
-
+  /*This sets the Portfolio photo to align and justify items to the center.*/
   .contentimg {
     align-items: center;
     justify-content: center;
   }
-
+ /*This sets the links to an absolute position and has them on the right.*/
   .links {
     position: absolute;
     float:end;
   }
 
+  /*This gives the copyright a relative position and text is aligned at the end
+  of the page with bottom margin of 0 pixels and padding of 20 pixels.*/
+  .copyright {
+    position: relative;
+    text-align: end;
+    bottom: 0px;
+    padding: 20px;
+  }
 }
 
 /*This changes the page when the screen size is between 768 pixels, and 992 pixels. The
 flex changes to 33.333%*/
-
 @media screen and (max-width: 992px) {
   .boxes {
     display: flex;
     flex: 0 0 33.333%;
   }
 
+/*This changes the content image to justify to the center*/
   .contentimg {
     display: flex;
     justify-content: center;
