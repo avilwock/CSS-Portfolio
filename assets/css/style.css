@@ -6,6 +6,7 @@ body {
   font-family: system-ui;
   color: white;
   background-color: black;
+  padding: 0;
   }
 
 /*This sets the nav bar to have no padding, aligns the list items in a straight 
@@ -18,8 +19,15 @@ font size of 20 pixels.*/
   float: right;
   font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
   font-size: 20px;
+  margin-top: 0;
+  height: 20px;
 }
 
+
+.header {
+  margin-top: 0;
+  padding-top: 20px;
+}
   /*This sets all of the links on the Nav bar to a relative position, and positions
   it 150 pixels from the top of the screen, no padding, a transparent background, 
 removes bullets from the list items, and sets the top of the box to the top of the page
